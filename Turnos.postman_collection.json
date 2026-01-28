@@ -1,0 +1,322 @@
+{
+  "info": {
+    "_postman_id": "5f0adb22-1e6b-4243-8624-b87679276a57",
+    "name": "Turnos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50836168",
+    "_collection_link": "https://go.postman.co/collection/50836168-5f0adb22-1e6b-4243-8624-b87679276a57?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Read all",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"descripcion_t\": \"TURNO QUE ABRE LAS OFICINAS             \",\r\n        \"hora_fin_t\": \"17:30\",\r\n        \"hora_inicio_t\": \"08:00\",\r\n        \"id_t\": 1,\r\n        \"nombre_t\": \"TURNO COMPLETO                          \",\r\n        \"tipo_t\": \"NORMAL                                  \",\r\n        \"total_t\": \"09:00\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/read_all",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "read_all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \"descripcion_t\": \"TURNO QUE ABRE LAS OFICINAS             \",\r\n        \"hora_fin_t\": \"17:30\",\r\n        \"hora_inicio_t\": \"08:10\",\r\n        \"id_t\": 1,\r\n        \"nombre_t\": \"TURNO COMPLETO                          \",\r\n        \"tipo_t\": \"NORMAL                                  \",\r\n        \"total_t\": \"09:00\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/update/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "update",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update1",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"descripcion_t\": \"2DO TURNO                               \",\r\n    \"hora_fin_t\": \"18:00\",\r\n    \"hora_inicio_t\": \"09:01\",\r\n    \"id_t\": 2,\r\n    \"nombre_t\": \"SEGUNDO TURNO                           \",\r\n    \"tipo_t\": \"NORMAL                                  \",\r\n    \"total_t\": \"09:01\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/update/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "update",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update3",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"descripcion_t\": \"TURNO DINERS 2                          \",\r\n    \"hora_fin_t\": \"18:00\",\r\n    \"hora_inicio_t\": \"09:10\",\r\n    \"id_t\": 4,\r\n    \"nombre_t\": \"TURNO DINERS                            \",\r\n    \"tipo_t\": \"NORMAL                                  \",\r\n    \"total_t\": \"09:15\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/update/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "update",
+            "4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Insert",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"descripcion_t\": \"TURNO DINERS 4\",\r\n    \"hora_fin_t\": \"18:00\",\r\n    \"hora_inicio_t\": \"09:00\",\r\n     \"nombre_t\": \"TURNO DINERS4\",\r\n    \"tipo_t\": \"NORMAL\",\r\n    \"total_t\": \"09:00\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/insert",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "insert"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read_by_Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/read_by_name/TURNO TARDE",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "read_by_name",
+            "TURNO TARDE"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read_by_Name1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/read_by_name/TURNO DINERS4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "read_by_name",
+            "TURNO DINERS4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Read_all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/read_all",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "read_all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Insert_1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"descripcion_t\": \"TURNO DINERS 5\",\r\n    \"hora_fin_t\": \"18:00\",\r\n    \"hora_inicio_t\": \"09:00\",\r\n     \"nombre_t\": \"TURNO DINERS5\",\r\n    \"tipo_t\": \"NORMAL\",\r\n    \"total_t\": \"09:00\" \r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/insert",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "insert"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Insert_2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"descripcion_t\": \"TURNO 8 Tarde\",\r\n    \"hora_fin_t\": \"18:00\",\r\n    \"hora_inicio_t\": \"09:00\",\r\n     \"nombre_t\": \"TURNO 8 Tarde\",\r\n    \"tipo_t\": \"Dificil\",\r\n    \"total_t\": \"09:00\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/turnos/insert",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "turnos",
+            "insert"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
