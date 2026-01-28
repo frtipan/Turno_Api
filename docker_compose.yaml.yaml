@@ -1,0 +1,183 @@
+openapi: 3.0.3
+info:
+  title: Turnos
+  contact: {}
+  version: 1.0.0
+servers:
+- url: http://127.0.0.1:5000
+paths:
+  /api/turnos/read_all:
+    get:
+      summary: Read all
+      description: Obtiene todos los turnos
+      operationId: readAllTurnos
+      responses:
+        "200":
+          description: Lista de turnos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/inline_response_200"
+  /api/turnos/update/1:
+    put:
+      summary: Update
+      description: Actualiza el turno con ID 1
+      operationId: updateTurno1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_1_body"
+        required: true
+      responses:
+        "200":
+          description: Turno actualizado correctamente
+  /api/turnos/update/2:
+    put:
+      summary: Update1
+      description: Actualiza el turno con ID 2
+      operationId: updateTurno2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_2_body"
+        required: true
+      responses:
+        "200":
+          description: Turno actualizado correctamente
+  /api/turnos/update/4:
+    put:
+      summary: Update3
+      description: Actualiza el turno con ID 4
+      operationId: updateTurno4
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_4_body"
+        required: true
+      responses:
+        "200":
+          description: Turno actualizado correctamente
+  /api/turnos/insert:
+    post:
+      summary: Insert
+      description: Inserta un nuevo turno
+      operationId: insertTurno
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/turnos_insert_body"
+        required: true
+      responses:
+        "200":
+          description: Turno insertado correctamente
+  /api/turnos/read_by_name/{nombre}:
+    get:
+      summary: Read by name
+      description: Busca turnos por nombre
+      operationId: readByName
+      parameters:
+      - name: nombre
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Resultado de la búsqueda
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+components:
+  schemas:
+    inline_response_200:
+      type: object
+      properties:
+        id_t:
+          type: integer
+        nombre_t:
+          type: string
+        descripcion_t:
+          type: string
+        hora_inicio_t:
+          type: string
+        hora_fin_t:
+          type: string
+        total_t:
+          type: string
+        tipo_t:
+          type: string
+    update_1_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+        hora_fin_t:
+          type: string
+        hora_inicio_t:
+          type: string
+        id_t:
+          type: integer
+        nombre_t:
+          type: string
+        tipo_t:
+          type: string
+        total_t:
+          type: string
+    update_2_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+        hora_fin_t:
+          type: string
+        hora_inicio_t:
+          type: string
+        id_t:
+          type: integer
+        nombre_t:
+          type: string
+        tipo_t:
+          type: string
+        total_t:
+          type: string
+    update_4_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+        hora_fin_t:
+          type: string
+        hora_inicio_t:
+          type: string
+        id_t:
+          type: integer
+        nombre_t:
+          type: string
+        tipo_t:
+          type: string
+        total_t:
+          type: string
+    turnos_insert_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+        hora_fin_t:
+          type: string
+        hora_inicio_t:
+          type: string
+        nombre_t:
+          type: string
+        tipo_t:
+          type: string
+        total_t:
+          type: string
