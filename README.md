@@ -60,6 +60,7 @@ Instala las librerías necesarias con:
 ```bash
 pip install Flask Flask-SQLAlchemy psycopg2-binary python-dotenv Flask-Migrate
 
+```
 
 ---
 
