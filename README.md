@@ -77,6 +77,20 @@ DB_PASSWORD=contraseña
 ```
 
 ---
+---
+## Documentacion en Postman y Swagger
 
+```
+Documentacion_Turnos.pdf
+Documentacion-Turnos-1.00-resolved.json -----> Swagger
+Documentacion-Turnos-1.00-resolved.yaml -----> Swagger
+html-documentation-generated -----> Swagger
 
+```
+
+```
+Turnos.postman_collection.json -----> Postman
+
+```
+---
 

@@ -1,0 +1,273 @@
+openapi: 3.0.3
+info:
+  title: Turnos
+  contact: {}
+  version: 1.0.0
+servers:
+- url: http://127.0.0.1
+paths:
+  /api/turnos/read_all:
+    get:
+      summary: Read all
+      description: Read all
+      operationId: readAll
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/turnos_read_all_body"
+            examples:
+              Read all:
+                value:
+                  descripcion_t: 'TURNO QUE ABRE LAS OFICINAS             '
+                  hora_fin_t: 1050
+                  hora_inicio_t: 08:00
+                  id_t: 1
+                  nombre_t: 'TURNO COMPLETO                          '
+                  tipo_t: 'NORMAL                                  '
+                  total_t: 09:00
+      responses:
+        "200":
+          description: ""
+  /api/turnos/read_by_name/TURNO TARDE:
+    get:
+      summary: Read_by_Name
+      description: Read_by_Name
+      operationId: readByName
+      responses:
+        "200":
+          description: ""
+  /api/turnos/read_by_name/TURNO DINERS4:
+    get:
+      summary: Read_by_Name1
+      description: Read_by_Name1
+      operationId: readByName1
+      responses:
+        "200":
+          description: ""
+  /api/turnos/update/1:
+    put:
+      summary: Update
+      description: Update
+      operationId: update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_1_body"
+            examples:
+              Update:
+                value:
+                  descripcion_t: 'TURNO QUE ABRE LAS OFICINAS             '
+                  hora_fin_t: 1050
+                  hora_inicio_t: 08:10
+                  id_t: 1
+                  nombre_t: 'TURNO COMPLETO                          '
+                  tipo_t: 'NORMAL                                  '
+                  total_t: 09:00
+      responses:
+        "200":
+          description: ""
+  /api/turnos/update/2:
+    put:
+      summary: Update1
+      description: Update1
+      operationId: update1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_2_body"
+            examples:
+              Update1:
+                value:
+                  descripcion_t: '2DO TURNO                               '
+                  hora_fin_t: 1080
+                  hora_inicio_t: 09:01
+                  id_t: 2
+                  nombre_t: 'SEGUNDO TURNO                           '
+                  tipo_t: 'NORMAL                                  '
+                  total_t: 09:01
+      responses:
+        "200":
+          description: ""
+  /api/turnos/update/4:
+    put:
+      summary: Update3
+      description: Update3
+      operationId: update3
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/update_4_body"
+            examples:
+              Update3:
+                value:
+                  descripcion_t: 'TURNO DINERS 2                          '
+                  hora_fin_t: 1080
+                  hora_inicio_t: 09:10
+                  id_t: 4
+                  nombre_t: 'TURNO DINERS                            '
+                  tipo_t: 'NORMAL                                  '
+                  total_t: 09:15
+      responses:
+        "200":
+          description: ""
+  /api/turnos/insert:
+    post:
+      summary: Insert_1
+      description: Insert_1
+      operationId: insert1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/turnos_insert_body"
+            examples:
+              Insert:
+                value:
+                  descripcion_t: TURNO DINERS 4
+                  hora_fin_t: 1080
+                  hora_inicio_t: 09:00
+                  nombre_t: TURNO DINERS4
+                  tipo_t: NORMAL
+                  total_t: 09:00
+              Insert_1:
+                value:
+                  descripcion_t: TURNO DINERS 5
+                  hora_fin_t: 1080
+                  hora_inicio_t: 09:00
+                  nombre_t: TURNO DINERS5
+                  tipo_t: NORMAL
+                  total_t: 09:00
+              Insert_2:
+                value:
+                  descripcion_t: TURNO 8 Tarde
+                  hora_fin_t: 1080
+                  hora_inicio_t: 09:00
+                  nombre_t: TURNO 8 Tarde
+                  tipo_t: Dificil
+                  total_t: 09:00
+      responses:
+        "200":
+          description: ""
+components:
+  schemas:
+    turnos_read_all_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+          example: 'TURNO QUE ABRE LAS OFICINAS             '
+        hora_fin_t:
+          type: string
+          example: "1050"
+        hora_inicio_t:
+          type: string
+          example: 08:00
+        id_t:
+          type: number
+          example: 1
+        nombre_t:
+          type: string
+          example: 'TURNO COMPLETO                          '
+        tipo_t:
+          type: string
+          example: 'NORMAL                                  '
+        total_t:
+          type: string
+          example: 09:00
+    update_1_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+          example: 'TURNO QUE ABRE LAS OFICINAS             '
+        hora_fin_t:
+          type: string
+          example: "1050"
+        hora_inicio_t:
+          type: string
+          example: 08:10
+        id_t:
+          type: number
+          example: 1
+        nombre_t:
+          type: string
+          example: 'TURNO COMPLETO                          '
+        tipo_t:
+          type: string
+          example: 'NORMAL                                  '
+        total_t:
+          type: string
+          example: 09:00
+    update_2_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+          example: '2DO TURNO                               '
+        hora_fin_t:
+          type: string
+          example: "1080"
+        hora_inicio_t:
+          type: string
+          example: 09:01
+        id_t:
+          type: number
+          example: 2
+        nombre_t:
+          type: string
+          example: 'SEGUNDO TURNO                           '
+        tipo_t:
+          type: string
+          example: 'NORMAL                                  '
+        total_t:
+          type: string
+          example: 09:01
+    update_4_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+          example: 'TURNO DINERS 2                          '
+        hora_fin_t:
+          type: string
+          example: "1080"
+        hora_inicio_t:
+          type: string
+          example: 09:10
+        id_t:
+          type: number
+          example: 4
+        nombre_t:
+          type: string
+          example: 'TURNO DINERS                            '
+        tipo_t:
+          type: string
+          example: 'NORMAL                                  '
+        total_t:
+          type: string
+          example: 09:15
+    turnos_insert_body:
+      type: object
+      properties:
+        descripcion_t:
+          type: string
+          example: TURNO 8 Tarde
+        hora_fin_t:
+          type: string
+          example: "1080"
+        hora_inicio_t:
+          type: string
+          example: 09:00
+        nombre_t:
+          type: string
+          example: TURNO 8 Tarde
+        tipo_t:
+          type: string
+          example: Dificil
+        total_t:
+          type: string
+          example: 09:00
